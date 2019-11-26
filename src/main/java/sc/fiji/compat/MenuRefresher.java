@@ -5,7 +5,9 @@ import ij.Menus;
 import ij.Prefs;
 import ij.plugin.PlugIn;
 
-import java.awt.Menu;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
+
 import java.util.Hashtable;
 
 import fiji.Main;
@@ -36,15 +38,17 @@ public class MenuRefresher implements PlugIn, Runnable {
 		if (!commands.containsKey("Install PlugIn...")) {
 			commands.put("Install PlugIn...", "sc.fiji.compat.PlugInInstaller");
 			if (IJ.getInstance() != null) {
-				final Menu plugins = FijiTools.getMenu("Plugins");
+				final JMenu plugins = FijiTools.getMenu("Plugins");
 				if (plugins != null)
-					for (int i = 0; i < plugins.getItemCount(); i++)
-						if (plugins.getItem(i).getLabel().equals("-")) {
+					for (int i = 0; i < plugins.getItemCount(); i++) {
+						JMenuItem mi=plugins.getItem(i);
+						if (mi!=null && mi.getLabel().equals("-")) {
 							plugins.insert("Install PlugIn...", i);
 							plugins.getItem(i).addActionListener(
 									IJ.getInstance());
 							break;
 						}
+					}
 			}
 		}
 		commands.put("Compile and Run...", "sc.fiji.compat.Compile_and_Run");

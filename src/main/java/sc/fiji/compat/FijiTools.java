@@ -5,10 +5,14 @@ import ij.Menus;
 import ij.plugin.PlugIn;
 
 import java.awt.Frame;
-import java.awt.Menu;
 import java.awt.MenuBar;
-import java.awt.MenuContainer;
-import java.awt.MenuItem;
+
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import java.awt.Container;
+import javax.swing.JMenuItem;
+import javax.swing.JPopupMenu;
+
 import java.awt.PopupMenu;
 import java.io.File;
 import java.io.PrintWriter;
@@ -166,7 +170,7 @@ public class FijiTools {
 	 *
 	 * @param menuPath the menu path, e.g. {@code File>New>Bio-Formats}
 	 */
-	public static MenuItem getMenuItem(String menuPath) {
+	public static JMenuItem getMenuItem(String menuPath) {
 		return getMenuItem(Menus.getMenuBar(), menuPath, false);
 	}
 
@@ -175,17 +179,17 @@ public class FijiTools {
 	 *
 	 * If the menu item was not found, create a {@link Menu} for the given path.
 	 *
-	 * @param container an instance of {@link MenuBar} or {@link Menu}
+	 * @param menuBar2 an instance of {@link MenuBar} or {@link Menu}
 	 * @param menuPath the menu path, e.g. {@code File>New>Bio-Formats}
 	 * @param createMenuIfNecessary if the menu item was not found, create a menu
 	 */
-	public static MenuItem getMenuItem(MenuContainer container,
+	public static JMenuItem getMenuItem(Container menuBar2,
 			String menuPath, boolean createMenuIfNecessary) {
 		String name;
-		MenuBar menuBar = (container instanceof MenuBar) ?
-			(MenuBar)container : null;
-		Menu menu = (container instanceof Menu) ?
-			(Menu)container : null;
+		JMenuBar menuBar = (menuBar2 instanceof JMenuBar) ?
+			(JMenuBar)menuBar2 : null;
+		JMenu menu = (menuBar2 instanceof JMenu) ?
+			(JMenu)menuBar2 : null;
 		while (menuPath.endsWith(">"))
 			menuPath = menuPath.substring(0, menuPath.length() - 1);
 		while (menuPath != null && menuPath.length() > 0) {
@@ -198,12 +202,12 @@ public class FijiTools {
 				name = menuPath.substring(0, croc);
 				menuPath = menuPath.substring(croc + 1);
 			}
-			MenuItem current = getMenuItem(menuBar, menu, name,
+			JMenuItem current = getMenuItem(menuBar, menu, name,
 				createMenuIfNecessary);
 			if (current == null || menuPath == null)
 				return current;
 			menuBar = null;
-			menu = (Menu)current;
+			menu = (JMenu)current;
 		}
 		return null;
 	}
@@ -212,10 +216,11 @@ public class FijiTools {
 	 * Get the item with the given name either from the menuBar, or if
 	 * that is null, from the menu.
 	 */
-	protected static MenuItem getMenuItem(MenuBar menuBar, Menu menu,
+	protected static JMenuItem getMenuItem(JMenuBar menuBar, JMenu menu,
 			String name, boolean createIfNecessary) {
 		if (menuBar == null && menu == null)
 			return null;
+		/*
 		if (menuBar != null && name.equals("Help")) {
 			menu = menuBar.getHelpMenu();
 			if (menu == null && createIfNecessary) {
@@ -224,18 +229,18 @@ public class FijiTools {
 			}
 			return menu;
 		}
-
+		*/
 		int count = menuBar != null ?
 			menuBar.getMenuCount() : menu.getItemCount();
 		for (int i = 0; i < count; i++) {
-			MenuItem current = menuBar != null ?
+			JMenuItem current = menuBar != null ?
 				menuBar.getMenu(i) : menu.getItem(i);
-			if (name.equals(current.getLabel()))
+			if (name.equals(current==null?null:current.getText()))
 				return current;
 		}
 
 		if (createIfNecessary) {
-			Menu newMenu = new PopupMenu(name);
+			JMenu newMenu = new JMenu(name);
 			if (menuBar != null)
 				menuBar.add(newMenu);
 			else
@@ -254,7 +259,7 @@ public class FijiTools {
 	 * @param command the command to run (as per the plugins.config)
 	 * @return the added menu item
 	 */
-	public static MenuItem installPlugin(String menuPath, String name,
+	public static JMenuItem installPlugin(String menuPath, String name,
 			String command) {
 		return installPlugin(menuPath, name, command, null);
 	}
@@ -270,7 +275,7 @@ public class FijiTools {
 	 */
 	/* TODO: sorted */
 	@SuppressWarnings("unchecked")
-	public static MenuItem installPlugin(String menuPath, String name,
+	public static JMenuItem installPlugin(String menuPath, String name,
 			String command, File jarFile) {
 		if (Menus.getCommands().get(name) != null) {
 			IJ.log("The user plugin " + name
@@ -279,10 +284,10 @@ public class FijiTools {
 			return null;
 		}
 
-		MenuItem item = null;
+		JMenuItem item = null;
 		if (IJ.getInstance() != null) {
-			Menu menu = getMenu(menuPath);
-			item = new MenuItem(name);
+			JMenu menu = getMenu(menuPath);
+			item = new JMenuItem(name);
 			menu.add(item);
 			item.addActionListener(IJ.getInstance());
 		}
@@ -313,8 +318,8 @@ public class FijiTools {
 		return item;
 	}
 
-	public static Menu getMenu(String menuPath) {
-		return (Menu)getMenuItem(Menus.getMenuBar(), menuPath, true);
+	public static JMenu getMenu(String menuPath) {
+		return (JMenu)getMenuItem(Menus.getMenuBar(), menuPath, true);
 	}
 
 	/**
