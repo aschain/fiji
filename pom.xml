@@ -194,7 +194,6 @@
 		<dependency>
 			<groupId>net.imagej</groupId>
 			<artifactId>ij</artifactId>
-			<version>1.52j</version>
 		</dependency>
 		<dependency>
 			<groupId>net.imagej</groupId>
