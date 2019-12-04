@@ -7,8 +7,8 @@ import ij.io.Opener;
 import ij.plugin.PlugIn;
 import ij.plugin.URLOpener;
 
-import java.awt.Menu;
-import java.awt.MenuItem;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -75,13 +75,15 @@ public class SampleImageLoader implements PlugIn {
 	}
 
 	protected static void handleSamples(SampleHandler handler) {
-		Menu menu = (Menu)FijiTools.getMenuItem(menuPath);
+		JMenu menu = (JMenu)FijiTools.getMenuItem(menuPath);
 		if (menu == null)
 			return;
 
 		Hashtable<?, ?> commands = Menus.getCommands();
 		for (int i = 0; i < menu.getItemCount(); i++) {
-			String label = menu.getItem(i).getLabel();
+			JMenuItem mi=menu.getItem(i);
+			if(mi==null) continue;
+			String label = mi.getText();
 			String command = (String)commands.get(label);
 			String url = null;
 			if (command != null && command.endsWith("\")") &&
@@ -126,7 +128,7 @@ public class SampleImageLoader implements PlugIn {
 		handleSamples(handler);
 
 		if (!commands.containsKey(menuItemLabel)) {
-			MenuItem item;
+			JMenuItem item;
 			if (commands.containsKey(ij1MenuItemLabel)) {
 				item = FijiTools.getMenuItem(menuPath + ">" + ij1MenuItemLabel);
 				commands.put(ij1MenuItemLabel, thisPlugin + "(\"cache\")");
