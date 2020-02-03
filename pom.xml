@@ -898,7 +898,7 @@
 				      <workingDirectory>${basedir}</workingDirectory>
 				      <arguments>
 				    	  <argument>jars</argument>
-				    	  <argument>fiji</argument>
+				    	  <argument>${project.artifactId}</argument>
 				    	  <argument>${basedir}/target/${project.build.finalName}.jar</argument>
 				      </arguments>
 				    </configuration>
