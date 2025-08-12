@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
 		<groupId>org.scijava</groupId>
 		<artifactId>pom-scijava</artifactId>
-		<version>27.0.1</version>
+		<version>42.0.0</version>
 		<relativePath />
 	</parent>
 
 	<groupId>sc.fiji</groupId>
 	<artifactId>fiji</artifactId>
-	<version>2.0.0-SNAPSHOT</version>
+	<version>2.17.1-SNAPSHOT</version>
 
 	<name>Fiji</name>
 	<description>Fiji is a distribution of ImageJ for the life sciences.</description>
-	<url>http://fiji.sc/</url>
+	<url>https://fiji.sc/</url>
 	<inceptionYear>2007</inceptionYear>
 	<organization>
 		<name>Fiji</name>
-		<url>http://fiji.sc/</url>
+		<url>https://fiji.sc/</url>
 	</organization>
 	<licenses>
 		<license>
 			<name>GNU General Public License v3+</name>
-			<url>http://www.gnu.org/licenses/gpl.html</url>
+			<url>https://www.gnu.org/licenses/gpl-3.0.html</url>
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
@@ -33,9 +33,8 @@
 		<developer>
 			<id>ctrueden</id>
 			<name>Curtis Rueden</name>
-			<url>https://imagej.net/User:Rueden</url>
+			<url>https://imagej.net/people/ctrueden</url>
 			<roles>
-				<role>founder</role>
 				<role>lead</role>
 				<role>developer</role>
 				<role>debugger</role>
@@ -48,57 +47,59 @@
 	<contributors>
 		<contributor>
 			<name>Johannes Schindelin</name>
-			<url>https://imagej.net/User:Schindelin</url>
+			<url>https://imagej.net/people/dscho</url>
 			<roles><role>founder</role></roles>
 			<properties><id>dscho</id></properties>
 		</contributor>
 		<contributor>
+			<name>Albert Cardona</name>
+			<url>https://imagej.net/people/acardona</url>
+			<roles><role>founder</role></roles>
+			<properties><id>acardona</id></properties>
+		</contributor>
+		<contributor>
 			<name>Ignacio Arganda-Carreras</name>
-			<url>https://imagej.net/User:Iarganda</url>
+			<url>https://imagej.net/people/iarganda</url>
 			<properties><id>iarganda</id></properties>
 		</contributor>
 		<contributor>
 			<name>Eric Barnhill</name>
-			<url>https://imagej.net/User:Ericbarnhill</url>
+			<url>https://imagej.net/people/ericbarnhill</url>
 			<properties><id>ericbarnhill</id></properties>
 		</contributor>
 		<contributor>
-			<name>Albert Cardona</name>
-			<url>https://imagej.net/User:Albertcardona</url>
-			<properties><id>acardona</id></properties>
-		</contributor>
-		<contributor>
 			<name>Michael Doube</name>
-			<url>https://imagej.net/User:Michaeldoube</url>
+			<url>https://imagej.net/people/mdoube</url>
 			<properties><id>mdoube</id></properties>
 		</contributor>
 		<contributor>
 			<name>Jan Eglinger</name>
-			<url>https://imagej.net/User:Eglinger</url>
+			<url>https://imagej.net/people/imagejan</url>
 			<properties><id>imagejan</id></properties>
 		</contributor>
 		<contributor>
 			<name>Michael Entrup</name>
-			<url>https://imagej.net/User:M-entrup</url>
+			<url>https://imagej.net/people/m-entrup</url>
 			<properties><id>m-entrup</id></properties>
 		</contributor>
 		<contributor>
 			<name>Tiago Ferreira</name>
-			<url>https://imagej.net/User:Tiago</url>
+			<url>https://imagej.net/people/tferr</url>
 			<properties><id>tferr</id></properties>
 		</contributor>
 		<contributor>
 			<name>Mark Hiner</name>
-			<url>https://imagej.net/User:Hinerm</url>
+			<url>https://imagej.net/people/hinerm</url>
 			<properties><id>hinerm</id></properties>
 		</contributor>
 		<contributor>
 			<name>Gabriel Landini</name>
-			<url>https://imagej.net/User:Landini</url>
+			<url>https://imagej.net/people/landinig</url>
 			<properties><id>landinig</id></properties>
 		</contributor>
 		<contributor>
 			<name>Cameron Lloyd</name>
+			<url>https://imagej.net/people/camlloyd</url>
 			<properties><id>camlloyd</id></properties>
 		</contributor>
 		<contributor>
@@ -106,12 +107,12 @@
 		</contributor>
 		<contributor>
 			<name>Kota Miura</name>
-			<url>https://imagej.net/User:Miura</url>
+			<url>https://imagej.net/people/miura</url>
 			<properties><id>miura</id></properties>
 		</contributor>
 		<contributor>
 			<name>Aparna Pal</name>
-			<url>https://imagej.net/User:Apal4</url>
+			<url>https://imagej.net/people/apal4</url>
 			<properties><id>apal4</id></properties>
 		</contributor>
 		<contributor>
@@ -119,22 +120,22 @@
 		</contributor>
 		<contributor>
 			<name>Stephan Saalfeld</name>
-			<url>https://imagej.net/User:Saalfeld</url>
+			<url>https://imagej.net/people/axtimwalde</url>
 			<properties><id>axtimwalde</id></properties>
 		</contributor>
 		<contributor>
 			<name>Benjamin Schmid</name>
-			<url>https://imagej.net/User:Bene</url>
+			<url>https://imagej.net/people/bene51</url>
 			<properties><id>bene51</id></properties>
 		</contributor>
 		<contributor>
 			<name>Jean-Yves Tinevez</name>
-			<url>https://imagej.net/User:JeanYvesTinevez</url>
+			<url>https://imagej.net/people/tinevez</url>
 			<properties><id>tinevez</id></properties>
 		</contributor>
 		<contributor>
 			<name>Pavel Tomancak</name>
-			<url>https://imagej.net/User:Tomancak</url>
+			<url>https://imagej.net/people/tomancak</url>
 			<properties><id>tomancak</id></properties>
 		</contributor>
 		<contributor>
@@ -145,12 +146,12 @@
 	<mailingLists>
 		<mailingList>
 			<name>Image.sc Forum</name>
-			<archive>https://forum.image.sc/tags/fiji</archive>
+			<archive>https://forum.image.sc/tag/fiji</archive>
 		</mailingList>
 	</mailingLists>
 
 	<scm>
-		<connection>scm:git:git://github.com/fiji/fiji</connection>
+		<connection>scm:git:https://github.com/fiji/fiji</connection>
 		<developerConnection>scm:git:git@github.com:fiji/fiji</developerConnection>
 		<tag>HEAD</tag>
 		<url>https://github.com/fiji/fiji</url>
@@ -160,8 +161,8 @@
 		<url>https://github.com/fiji/fiji/issues</url>
 	</issueManagement>
 	<ciManagement>
-		<system>Travis CI</system>
-		<url>https://travis-ci.org/fiji/fiji</url>
+		<system>GitHub Actions</system>
+		<url>https://github.com/fiji/fiji/actions</url>
 	</ciManagement>
 
 	<properties>
@@ -173,15 +174,8 @@
 		<license.projectName>Fiji distribution of ImageJ for the life sciences.</license.projectName>
 
 		<!-- NB: Deploy releases to the SciJava Maven repository. -->
-		<releaseProfiles>deploy-to-scijava</releaseProfiles>
+		<releaseProfiles>sign,deploy-to-scijava</releaseProfiles>
 	</properties>
-
-	<repositories>
-		<repository>
-			<id>scijava.public</id>
-			<url>https://maven.scijava.org/content/groups/public</url>
-		</repository>
-	</repositories>
 
 	<dependencies>
 		<!-- Fiji Is Just ImageJ! -->
@@ -189,8 +183,6 @@
 			<groupId>net.imagej</groupId>
 			<artifactId>imagej</artifactId>
 		</dependency>
-
-		<!-- Fiji Incorporates Jointly ImageJ1 ;-) -->
 		<dependency>
 			<groupId>net.imagej</groupId>
 			<artifactId>ij</artifactId>
@@ -203,18 +195,30 @@
 			<groupId>net.imagej</groupId>
 			<artifactId>imagej-legacy</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.javassist</groupId>
-			<artifactId>javassist</artifactId>
-		</dependency>
 
 		<!-- SciJava dependencies - https://github.com/scijava -->
+		<dependency>
+			<groupId>org.scijava</groupId>
+			<artifactId>app-launcher</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.scijava</groupId>
 			<artifactId>scijava-common</artifactId>
 		</dependency>
 
+		<!-- Third-party dependencies -->
+		<dependency>
+			<groupId>org.javassist</groupId>
+			<artifactId>javassist</artifactId>
+		</dependency>
+
 		<!-- Runtime dependencies -->
+
+		<dependency>
+			<groupId>org.scijava</groupId>
+			<artifactId>script-editor-jython</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 
 		<!-- Op-Finder is currently GPL -->
 		<dependency>
@@ -224,6 +228,11 @@
 		</dependency>
 
 		<!-- Standard Fiji projects - https://github.com/fiji -->
+		<dependency>
+			<groupId>org.janelia</groupId>
+			<artifactId>H5J_Loader_Plugin</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 		<dependency>
 			<groupId>sc.fiji</groupId>
 			<artifactId>3D_Blob_Segmentation</artifactId>
@@ -371,6 +380,11 @@
 		</dependency>
 		<dependency>
 			<groupId>sc.fiji</groupId>
+			<artifactId>FilamentDetector</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>sc.fiji</groupId>
 			<artifactId>FlowJ_</artifactId>
 			<scope>runtime</scope>
 		</dependency>
@@ -382,6 +396,11 @@
 		<dependency>
 			<groupId>sc.fiji</groupId>
 			<artifactId>Gray_Morphology</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>sc.fiji</groupId>
+			<artifactId>HDF5_Vibez</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
@@ -417,6 +436,11 @@
 		<dependency>
 			<groupId>sc.fiji</groupId>
 			<artifactId>IsoData_Classifier</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>sc.fiji</groupId>
+			<artifactId>Kappa</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
@@ -521,11 +545,6 @@
 		</dependency>
 		<dependency>
 			<groupId>sc.fiji</groupId>
-			<artifactId>Simple_Neurite_Tracer</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>sc.fiji</groupId>
 			<artifactId>Siox_Segmentation</artifactId>
 			<scope>runtime</scope>
 		</dependency>
@@ -586,7 +605,7 @@
 		</dependency>
 		<dependency>
 			<groupId>sc.fiji</groupId>
-			<artifactId>TrackMate_</artifactId>
+			<artifactId>TrackMate</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
@@ -626,11 +645,6 @@
 		</dependency>
 		<dependency>
 			<groupId>sc.fiji</groupId>
-			<artifactId>View5D_</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>sc.fiji</groupId>
 			<artifactId>Volume_Calculator</artifactId>
 			<scope>runtime</scope>
 		</dependency>
@@ -652,16 +666,6 @@
 		<dependency>
 			<groupId>sc.fiji</groupId>
 			<artifactId>fiji-lib</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.janelia</groupId>
-			<artifactId>H5J_Loader_Plugin</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>sc.fiji</groupId>
-			<artifactId>HDF5_Vibez</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
@@ -706,10 +710,10 @@
 		</dependency>
 
 		<!-- External Fiji projects -->
-		<!-- https://github.com/tferr/ASA -->
+		<!-- https://github.com/bionanoimaging/View5D -->
 		<dependency>
-			<groupId>ca.mcgill</groupId>
-			<artifactId>Sholl_Analysis</artifactId>
+			<groupId>de.nanoimaging</groupId>
+			<artifactId>View5D_</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 		<!-- https://github.com/saalfeldlab/jitk-tps -->
@@ -730,10 +734,22 @@
 			<artifactId>bio-formats_plugins</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		<!-- https://github.com/saalfeldlab/n5-viewer -->
+		<dependency>
+			<groupId>org.janelia.saalfeldlab</groupId>
+			<artifactId>n5-viewer_fiji</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 		<!-- https://github.com/saalfeldlab/bigwarp -->
 		<dependency>
 			<groupId>sc.fiji</groupId>
 			<artifactId>bigwarp_fiji</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<!-- https://github.com/juglab/labkit-ui -->
+		<dependency>
+			<groupId>sc.fiji</groupId>
+			<artifactId>labkit-ui</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 		<!-- https://github.com/saalfeldlab/trakem2-tps -->
@@ -747,7 +763,6 @@
 		<dependency>
 			<groupId>sc.fiji</groupId>
 			<artifactId>bigdataviewer-core</artifactId>
-			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>sc.fiji</groupId>
@@ -780,13 +795,6 @@
 			<groupId>sc.fiji</groupId>
 			<artifactId>TrakEM2_</artifactId>
 			<scope>runtime</scope>
-			<exclusions>
-				<!-- TEMP: Until TrakEM2_ 1.0j is released. -->
-				<exclusion>
-					<groupId>org.scijava</groupId>
-					<artifactId>jython-shaded</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>sc.fiji</groupId>
@@ -821,9 +829,52 @@
 			<scope>runtime</scope>
 		</dependency>
 
+		<!-- Other libraries -->
+
+		<!--
+		reload4j - https://reload4j.qos.ch/
+		A drop-in replacement for log4j 1.2.17 without the security problems.
+		-->
+		<dependency>
+			<groupId>ch.qos.reload4j</groupId>
+			<artifactId>reload4j</artifactId>
+		</dependency>
+
+		<!-- JFreeSVG - https://www.jfree.org/jfreesvg/ -->
+		<dependency>
+			<groupId>org.jfree</groupId>
+			<artifactId>jfreesvg</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!-- JOGL libraries, for Java 3D - https://github.com/jogamp -->
+		<dependency>
+			<groupId>org.jogamp.gluegen</groupId>
+			<artifactId>gluegen-rt</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jogamp.jogl</groupId>
+			<artifactId>jogl-all</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jogamp.gluegen</groupId>
+			<artifactId>gluegen-rt</artifactId>
+			<classifier>${scijava.natives.classifier.gluegen}</classifier>
+		</dependency>
+		<dependency>
+			<groupId>org.jogamp.jogl</groupId>
+			<artifactId>jogl-all</artifactId>
+			<classifier>${scijava.natives.classifier.jogl}</classifier>
+		</dependency>
+
 		<!-- Optional runtime dependencies -->
 
-		<!-- SciJava projects - https://github.com/scijava -->
+		<!--
+		NB: scijava-config provides application configuration (e.g. logging) that
+		should not be propagated to downstream components depending on Fiji.
+		-->
 		<dependency>
 			<groupId>org.scijava</groupId>
 			<artifactId>scijava-config</artifactId>
@@ -831,37 +882,9 @@
 			<optional>true</optional>
 		</dependency>
 
-		<!-- JOGL libraries, for Java 3D - https://github.com/jogamp -->
-		<dependency>
-			<groupId>org.jogamp.gluegen</groupId>
-			<artifactId>gluegen-rt-main</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.jogamp.joal</groupId>
-			<artifactId>joal-main</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.jogamp.jocl</groupId>
-			<artifactId>jocl-main</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.jogamp.jogl</groupId>
-			<artifactId>jogl-all-main</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
-		</dependency>
-
 		<!--
-		NB: At the moment, Bio-Formats currently brings this in. But
-		regardless we should define an slf4j logging implementation.
-		If a new Bio-Formats version updates its logger, this should
-		be updated accordingly.
+		HACK: Bio-Formats depends on logback-classic without the optional flag set,
+		but it should be optional, so we add an explicit optional dependency here.
 		-->
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
@@ -870,17 +893,19 @@
 			<optional>true</optional>
 		</dependency>
 
-		<!--
-		Bio-Formats brings this in but we have some version skew. This
-		is now managed in pom-scijava so we can ensure a consistent
-		version is used in Fiji.
-		-->
+		<!-- Test scope dependencies -->
 		<dependency>
-			<groupId>joda-time</groupId>
-			<artifactId>joda-time</artifactId>
-			<scope>runtime</scope>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	<repositories>
+		<repository>
+			<id>scijava.public</id>
+			<url>https://maven.scijava.org/content/groups/public</url>
+		</repository>
+	</repositories>
 	<build>
 		<plugins>
 			<plugin>

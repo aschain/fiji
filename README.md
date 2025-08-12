@@ -1,5 +1,6 @@
-[![](https://travis-ci.org/fiji/fiji.svg?branch=master)](https://travis-ci.org/fiji/fiji)
-[![Join the chat at https://gitter.im/fiji/fiji](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/fiji/fiji?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![](https://github.com/fiji/fiji/actions/workflows/build.yml/badge.svg)](https://github.com/fiji/fiji/actions/workflows/build.yml)
+[![developer chat](https://img.shields.io/badge/zulip-join_chat-brightgreen.svg)](https://imagesc.zulipchat.com/#narrow/stream/327238-Fiji)
+[![Image.sc Forum](https://img.shields.io/badge/dynamic/json.svg?label=forum&amp;url=https%3A%2F%2Fforum.image.sc%2Ftags%2Ffiji.json&amp;query=%24.topic_list.tags.0.topic_count&amp;colorB=green&amp;&amp;suffix=%20topics&amp;logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAABPklEQVR42m3SyyqFURTA8Y2BER0TDyExZ+aSPIKUlPIITFzKeQWXwhBlQrmFgUzMMFLKZeguBu5y+//17dP3nc5vuPdee6299gohUYYaDGOyyACq4JmQVoFujOMR77hNfOAGM+hBOQqB9TjHD36xhAa04RCuuXeKOvwHVWIKL9jCK2bRiV284QgL8MwEjAneeo9VNOEaBhzALGtoRy02cIcWhE34jj5YxgW+E5Z4iTPkMYpPLCNY3hdOYEfNbKYdmNngZ1jyEzw7h7AIb3fRTQ95OAZ6yQpGYHMMtOTgouktYwxuXsHgWLLl+4x++Kx1FJrjLTagA77bTPvYgw1rRqY56e+w7GNYsqX6JfPwi7aR+Y5SA+BXtKIRfkfJAYgj14tpOF6+I46c4/cAM3UhM3JxyKsxiOIhH0IO6SH/A1Kb1WBeUjbkAAAAAElFTkSuQmCC)](https://forum.image.sc/tag/fiji)
 
 [ Fiji Is Just ImageJ ]
 =======================
@@ -16,7 +17,7 @@ At the moment, the following platforms are supported:
 - Windows Intel 32-bit/64-bit
 - Linux Intel 32-bit/64-bit
 - MacOSX Intel 32-bit/64-bit (partial support for PowerPC 32-bit)
-- all platforms supporting Java and a POSIX shell, via bin/ImageJ.sh
+- all platforms supporting Java and a POSIX shell, via `bin/ImageJ.sh`
 
 The setup is as easy as unpacking the portable archive and
 double-clicking the [ImageJ
@@ -57,14 +58,14 @@ all imaginable ways.
 
 Therefore, the majority of Fiji is licensed under the GNU Public License
 version 2. Exceptions are listed in the
-[LICENSES](https://github.com/fiji/fiji/blob/master/LICENSES) file.
+[LICENSES](https://github.com/fiji/fiji/blob/main/LICENSES) file.
 
 Fiji's source code is split up into a [main
 repository](https://github.com/fiji/fiji), containing the top-level project and
 support scripts, while all components live in their own repositories in the
 [Fiji organization on GitHub](https://github.com/fiji/). As a rule of thumb: the
-file name and the project name correspond pretty well, e.g. fiji-compat.jar is
-maintained in [fiji-compat](https://github.com/fiji/fiji-compat).
+file name and the project name correspond pretty well, e.g. fiji-lib.jar is
+maintained in [fiji-lib](https://github.com/fiji/fiji-lib).
 
 Participating
 -------------
