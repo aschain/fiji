@@ -78,3 +78,6 @@ hs_err*.log
 /fiji-win32.exe
 /fiji-win64.exe
 /fiji.exe
+
+# github workflows #
+/.github/
